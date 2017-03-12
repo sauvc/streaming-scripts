@@ -12,7 +12,9 @@ These scripts can be used on a RaspberryPi to play videos on RaspberryPi immedia
 
 2. Change permissions to give the user execute access to `runstream.sh`
 
-3. To ensure that the `runstream.sh` script runs at reboot, add a instruction the to cronttab
+3. Create `/var/log/stream.log` to log any issues with the scripts.
+
+4. To ensure that the `runstream.sh` script runs at reboot, add a instruction the to cronttab
 
   Edit crontab using `crontab -e`. Add `@reboot /home/pi/runstream.sh > /var/log/stream.log 2>&1`
 
